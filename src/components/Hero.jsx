@@ -1,29 +1,28 @@
-import React from 'react';
-import './Hero.css';
-import heroImage from '../assets/profile.jpg'; 
+import "./Hero.css";
+import HeroImage from "../assets/hero-image.png";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-left">
-        <div className="info">
-          <h1>I'm John Francis A. Rivero</h1>
-          <h2>I code cool websites</h2>
-          <p>
-I am an IT student of Western Mindanao State University and I love coding and eating </p>
-          <div className="buttons">
-            <button className="btn-primary">My Portfolio</button>
-            <button className="btn-secondary">Contact Me</button>
-          </div>
-        </div>
-        <div className="socials">
-          <a href="#">Twitter</a>
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
+      <div className="hero-text">
+        <h1>Hi, I'm <br />John Francis A. Rivero{"\u00A0"}</h1>
+        <h2>Full-Stack Developer</h2>
+        <p>"Pagusapan natin yan."</p>
+        <div className="buttons">
+          <button className="btn-primary">Download CV</button>
+          <button className="btn-secondary">Let's Talk</button>
         </div>
       </div>
-      <div className="hero-right">
-        <img src={heroImage} alt="Hero" />
+      <div className="hero-img-container">
+        {/* Added motion.img for the bounce effect */}
+        <motion.img
+          src={HeroImage}
+          alt="Profile"
+          className="hero-img"
+          whileTap={{ scale: 1.2 }} // Image will scale up when clicked
+          transition={{ type: "spring", stiffness: 500, damping: 10 }} // Smooth bounce effect
+        />
       </div>
     </section>
   );
