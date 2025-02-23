@@ -1,0 +1,82 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures proper spacing */
+    align-items: center;
+    padding: 15px 50px; /* Increase left padding to shift nav items */
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin-left: -40px; /* Move the nav links to the left */
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  .nav-links a:hover {
+    color: #4db5ff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* Mobile Menu */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  }
+  
