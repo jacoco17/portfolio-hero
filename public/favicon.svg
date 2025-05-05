@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="248" fill="#0B0C10" stroke="#66FCF1" stroke-width="16"/>
+  
+  <!-- Code Brackets -->
+  <path d="M180 150L100 256L180 362" stroke="#66FCF1" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M332 150L412 256L332 362" stroke="#66FCF1" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Slash -->
+  <path d="M282 120L230 392" stroke="#66FCF1" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- Glow Effect -->
+  <circle cx="256" cy="256" r="248" stroke="rgba(102, 252, 241, 0.3)" stroke-width="8" filter="url(#glow)"/>
+  
+  <!-- Glow Filter -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+  </defs>
+</svg> 
